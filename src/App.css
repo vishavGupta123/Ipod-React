@@ -13,15 +13,93 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.outer-div{
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  position: relative;
+  border: 1px solid black;
+  background-color: lightgrey;
+}
+
+#outer-circle{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: white;
+}
+
+#inner-circle{
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 50%;
+  margin-top: -75px;
+  left: 50%;
+  margin-left: -75px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: lightgrey;
+}
+
+.menu{
+  cursor: pointer;
+  position: absolute;
+  left: 43%;
+  top: 10%;
+}
+
+.fast-forward-button{
+  cursor: pointer;
+  position: absolute;
+  left: 82%;
+  top: 45%;
+}
+
+.back-button{
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  left: 8%;
+}
+
+.play-pause{
+  position: absolute;
+  cursor: pointer;
+  top: 85%;
+  left: 43%;
+}
+
+.menu span{
+  font-weight: bolder;
+  font-size: large;
+}
+
+.screen{
+  box-sizing: border-box;
+  padding: 10px;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+.heading{
+  font-size: large;
+  display: block;
+  font-weight: bolder;
+}
+
+ul li{
+  margin-bottom: 10px;
+}
+
+.selected-option{
+  background-color: lightblue;
+  width: 60%;
+  padding: 10px;
 }
 
 .App-link {
@@ -36,3 +114,5 @@
     transform: rotate(360deg);
   }
 }
+
+
