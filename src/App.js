@@ -1,4 +1,8 @@
 import logo from './logo.svg';
+import fastForward from './Static_Folder/fast-forward.svg';
+import backward from './Static_Folder/backward.png';
+import play from './Static_Folder/play-button-arrowhead.png';
+import pause from './Static_Folder/pause.png';
 import React, {Component}  from 'react';
 import './App.css';
 import ZingTouch from 'zingtouch';
@@ -108,14 +112,14 @@ class App extends React.Component {
             <span>Menu</span>
           </div>
           <div className="fast-forward-button">
-              <img src="https://www.flaticon.com/svg/vstatic/svg/709/709533.svg?token=exp=1615451434~hmac=a4ce33cf252a006fe4127eba537ef4f2"  width="30px" height="30px" />
+              <img src={fastForward}  width="30px" height="30px" />
           </div>
           <div className="back-button">
-            <img src="https://www.flaticon.com/svg/vstatic/svg/854/854183.svg?token=exp=1615451679~hmac=2b0fd753abfa81b2942efbfb1241ac84" width="30px" height="30px" />
+            <img src={backward} width="30px" height="30px" />
           </div>
           <div className="play-pause">
-            <img src="https://www.flaticon.com/svg/vstatic/svg/727/727245.svg?token=exp=1615451888~hmac=c4f3c440c73e46ccdcf3826631ca46c2" width="20px" height="20px" />
-            <img src="https://www.flaticon.com/svg/vstatic/svg/151/151859.svg?token=exp=1615451937~hmac=7f7f9682a1f6e6f21afea237b4563e3e"width="20px" height="20px" />
+            <img src={play} width="20px" height="20px" />
+            <img src={pause}  width="20px" height="20px" />
           </div>
           <div id="inner-circle"></div>
         </div>
