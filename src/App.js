@@ -59,20 +59,29 @@ class App extends React.Component {
        
       }
     });
+    var innerButtonArea = document.getElementById('inner-circle');
+    var tapArea = ZingTouch.Region(innerButtonArea);
+    tapArea.bind(innerButtonArea,'tap',(e)=>{
+      console.log(e);
+      this.setState({
+        selectedIndex:this.state.currentlyChoosenItem,
+        showMainMenuScreen:false
+      })
+    })
     }
     
     // listElements[this.state.selectedIndex].classList.add('selected-option');
   }
-  selectMenuItem = () =>{
-    console.log(this.state);
-    this.setState({
-      selectedIndex:this.state.currentlyChoosenItem,
-      showMainMenuScreen:false
-    },()=>{
-      console.log(this.state);
-    });
+  // selectMenuItem = () =>{
+  //   console.log(this.state);
+  //   this.setState({
+  //     selectedIndex:this.state.currentlyChoosenItem,
+  //     showMainMenuScreen:false
+  //   },()=>{
+  //     console.log(this.state);
+  //   });
 
-  }
+  // }
   showMainMenu = ()=>{
     console.log('Hey there');
     this.setState({
@@ -99,7 +108,7 @@ class App extends React.Component {
             <img src="https://www.flaticon.com/svg/vstatic/svg/727/727245.svg?token=exp=1615451888~hmac=c4f3c440c73e46ccdcf3826631ca46c2" width="20px" height="20px" />
             <img src="https://www.flaticon.com/svg/vstatic/svg/151/151859.svg?token=exp=1615451937~hmac=7f7f9682a1f6e6f21afea237b4563e3e"width="20px" height="20px" />
           </div>
-          <div id="inner-circle" onClick={this.selectMenuItem} ></div>
+          <div id="inner-circle"></div>
         </div>
       </div>
       </div>
