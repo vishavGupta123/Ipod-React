@@ -72,7 +72,6 @@ class App extends React.Component {
       var menuDiv = document.getElementsByClassName('menu')[0];
       var menuRegion = ZingTouch.Region(menuDiv);
       menuRegion.bind(menuDiv,'tap',(e)=>{
-        console.log(e);
         this.setState({
           selectedIndex:-1,
           showMainMenuScreen:true
