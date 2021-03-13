@@ -69,6 +69,16 @@ class App extends React.Component {
       })
     })
     }
+      var menuDiv = document.getElementsByClassName('menu')[0];
+      var menuRegion = ZingTouch.Region(menuDiv);
+      menuRegion.bind(menuDiv,'tap',(e)=>{
+        console.log(e);
+        this.setState({
+          selectedIndex:-1,
+          showMainMenuScreen:true
+        });
+      })
+    
     
     // listElements[this.state.selectedIndex].classList.add('selected-option');
   }
@@ -82,20 +92,20 @@ class App extends React.Component {
   //   });
 
   // }
-  showMainMenu = ()=>{
-    console.log('Hey there');
-    this.setState({
-      selectedIndex:-1,
-      showMainMenuScreen:true
-    })
-  }
+  // showMainMenu = ()=>{
+  //   console.log('Hey there');
+  //   this.setState({
+  //     selectedIndex:-1,
+  //     showMainMenuScreen:true
+  //   })
+  // }
   render(){
     return (
       <div>
         <Screen id="screen" props={this.state} ></Screen>
          <div className="outer-div">
         <div id="outer-circle">
-          <div className="menu" onClick ={this.showMainMenu}>
+          <div className="menu">
             <span>Menu</span>
           </div>
           <div className="fast-forward-button">
