@@ -14,15 +14,11 @@ class Songs extends Component {
         }
     }
     async componentDidMount(){
-        const response = await youtube.get('/search',{
-            params:{
-                q:"Dua lipa"
-            }
-        });
-        console.log(response.data);
-        this.setState({
-            allSongs:response.data.items
+        axios.get('http://www.songsterr.com/a/ra/songs.json?pattern=dua lipa')
+        .then(response=>{
+            console.log(response);
         })
+
     }
     handleClick=(id)=>{
         console.log(id);
